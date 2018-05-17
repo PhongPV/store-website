@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js lint
+  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js add .
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -36,16 +36,15 @@ npm manifest:
       "eslint-plugin-import": "^2.11.0",
       "eslint-plugin-prettier": "^2.6.0",
       "nuxt": "^1.0.0",
-      "stylus": "^0.54.5"
+      "stylus": "^0.54.5",
+      "stylus-loader": "^3.0.2"
     },
     "devDependencies": {
       "babel-eslint": "^8.2.1",
-      "css-loader": "^0.28.11",
       "eslint": "^4.15.0",
       "eslint-friendly-formatter": "^3.0.0",
       "eslint-loader": "^1.7.1",
-      "eslint-plugin-vue": "^4.0.0",
-      "style-loader": "^0.21.0"
+      "eslint-plugin-vue": "^4.0.0"
     }
   }
 
@@ -3409,6 +3408,10 @@ Lockfile:
     version "4.3.0"
     resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
   
+  lodash.clonedeep@^4.5.0:
+    version "4.5.0"
+    resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+  
   lodash.get@^4.4.2:
     version "4.4.2"
     resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
@@ -5571,6 +5574,14 @@ Lockfile:
       glob "^7.1.2"
       loader-utils "^1.1.0"
   
+  stylus-loader@^3.0.2:
+    version "3.0.2"
+    resolved "https://registry.yarnpkg.com/stylus-loader/-/stylus-loader-3.0.2.tgz#27a706420b05a38e038e7cacb153578d450513c6"
+    dependencies:
+      loader-utils "^1.0.2"
+      lodash.clonedeep "^4.5.0"
+      when "~3.6.x"
+  
   stylus@^0.54.5:
     version "0.54.5"
     resolved "https://registry.yarnpkg.com/stylus/-/stylus-0.54.5.tgz#42b9560931ca7090ce8515a798ba9e6aa3d6dc79"
@@ -6129,6 +6140,10 @@ Lockfile:
       webpack-sources "^1.0.1"
       yargs "^8.0.2"
   
+  when@~3.6.x:
+    version "3.6.4"
+    resolved "https://registry.yarnpkg.com/when/-/when-3.6.4.tgz#473b517ec159e2b85005497a13983f095412e34e"
+  
   whet.extend@~0.9.9:
     version "0.9.9"
     resolved "https://registry.yarnpkg.com/whet.extend/-/whet.extend-0.9.9.tgz#f877d5bf648c97e5aa542fadc16d6a259b9c11a1"
@@ -6251,16 +6266,14 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c eslint --ext .js,.vue --ignore-path .gitignore .
-  Directory: /Users/phongpv/Documents/store-website
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:30281:17)
-      at ChildProcess.emit (events.js:180:13)
-      at maybeClose (internal/child_process.js:936:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
+  Error: Received malformed response from registry for undefined. The registry may be down.
+      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at Function.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:51419:15)
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:23451:28)
+      at Function.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:95:12)
+      at Function.findVersionInRegistryResponse (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:51461:19)
+      at NpmResolver.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:51479:28)

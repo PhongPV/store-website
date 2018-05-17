@@ -82,7 +82,7 @@ export default {
         margin-left 10px
     .info-container
       display flex
-      margin-bottom  30px;
+      margin-bottom 30px;
       justify-content: space-between;
       .price
         color #0036e8
