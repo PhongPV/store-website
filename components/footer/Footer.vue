@@ -20,7 +20,7 @@
       <div class="footer-name">
         <p>Service</p>
         <ul>
-          <li><a href="#">Buying</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="#">Sale</a></li>
           <li><a href="#">Demo</a></li>
           <li><a href="#">Support</a></li>
