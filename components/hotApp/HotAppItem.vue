@@ -9,14 +9,14 @@
       alt="top-app">
       <h4 class="title">{{title}}</h4>
       <div class="rate-container">
-        <span>Rate: </span>
+        <span class="rate-text">Rate: </span>
         <img
           class="image-star"
           src="/images/star.png"
           alt=""/>
       </div>
       <p class="download-text">Download: {{download}} Tr</p>
-      <p>Price: <span class="price-text">{{price}}$</span></p>
+      <p class="price-text">Price: <span class="price-num-text">{{price}}$</span></p>
       <div class="button-container">
         <div class="button">
           <span class="info-text">More Info</span>
@@ -58,16 +58,20 @@ export default {
 
 <style lang="stylus">
 .item-hot-container
-  margin 10px 0
+  margin 10px 5px
+  background-color #252525
   .item-wrap
-    border 1px solid grey
     padding-top 10px
     .title
       margin-top 30px
-    .price-text
+      color #fff
+    .price-num-text
       color #ff8e00
       margin-right 25px
+    .price-text
+      color #fff
     .download-text
+      color #fff
       font-size 15px
       margin-right 15px
     .rate-container
@@ -75,6 +79,8 @@ export default {
       font-size 15px
       display flex
       align-items center
+      .rate-text
+        color #fff
       .image-star
         margin-left 10px
     .info-container
@@ -88,15 +94,15 @@ export default {
         display flex
         align-items center
         justify-content center
-        background-color #fdfdfd
-        width 80px
+        background-color #252525
+        border 1px solid grey
+        width 100px
         height 30px
         font-size 13px
         font-weight 700
-        margin 5px 2px
+        margin 5px 3px
         .info-text
-          color #000
+          color #fff
         .install-text
-          color #0036e8
-
+          color #fff
 </style>
